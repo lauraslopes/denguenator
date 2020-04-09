@@ -8,9 +8,11 @@
   - X mostrar pontos
   - X velocidades diferentes (e meio random)
   - dengues não fazer movimento reto
-  - posições random
+  - posições random (fazer a factory)
   - menu inicio e menu gameover
-  - X gameover: dengues avançam (criar outra imagem)
+  - X gameover: dengues avançam
+  - atualizar imagem quando dengues avançam
+  - X desativar o click das dengues
   - música
   - inimigos mais fortes
   - corona - inimigo para coletar pontos
@@ -31,16 +33,28 @@
 <body>
   <div>
     <div class="score"><span>Score: 0</span></div>
-    <div class="dengue" id="dengue1"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
-    <div class="dengue" id="dengue2"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
-    <div class="dengue" id="dengue3"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
-    <div class="dengue" id="dengue4"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
-    <div class="dengue" id="dengue5"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
+    <div class="dengue" id="dengue1">
+      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+    </div>
+    <div class="dengue" id="dengue2">
+      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+    </div>
+    <div class="dengue" id="dengue3">
+      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+    </div>
+    <div class="dengue" id="dengue4">
+      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+    </div>
+    <div class="dengue" id="dengue5">
+      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+    </div>
   <div>
+
+
   <div class="gameover">
     <p>Score:</p>
-    <p id='finalscore'></p>
-    <p id='tryagain'>Try again</p>
+    <p id="finalscore"></p>
+    <p id="tryagain">Try again</p>
   </div>
 </body>
 </html>

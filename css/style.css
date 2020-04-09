@@ -5,7 +5,6 @@ body {
 }
 
 .dengue {
-  background-color: blue;
   position: absolute;
   width: 15%;
   top: 100%;
@@ -37,15 +36,13 @@ body {
   top: 50%;
   left: 50%;
   z-index: 40;
-  /* bring your own prefixes */
   transform: translate(-50%, -50%);
 
   border: 20px solid transparent;
-  -moz-border-image: -moz-linear-gradient(top left, rgba(128, 191, 255, 0.5), rgba(128, 191, 255, 1));
-  -webkit-border-image: -webkit-linear-gradient(top left, rgba(128, 191, 255, 0.5), rgba(128, 191, 255, 1));
-  border-image: linear-gradient(to bottom right, rgba(128, 191, 255, 0.5), rgba(128, 191, 255, 1));
+  /*-moz-border-image: -moz-linear-gradient(top left, rgba(255, 255, 255, 0.6), rgba(128, 191, 255, 0.6));*/
+  -webkit-border-image: -webkit-linear-gradient(top left, rgba(255, 255, 255, 1), rgba(128, 191, 255, 1));
   border-image-slice: 1;
-  background-image: linear-gradient(to bottom right, rgba(128, 191, 255, 0), rgba(128, 191, 255, 1));
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.7), rgba(128, 191, 255, 0.7));
 
   font-family: arial;
   font-size: 4vw;
@@ -57,7 +54,6 @@ body {
    position: fixed;
    top: 50%;
    left: 50%;
-   /* bring your own prefixes */
    transform: translate(-50%, -50%);
    border: 1px solid #000000;
 }
