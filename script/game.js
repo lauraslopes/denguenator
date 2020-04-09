@@ -1,33 +1,24 @@
-jQuery.fn.center = function () {
-  /*var id = jQuery(this).attr('id');
-  var coord = document.getElementById(id).getBoundingClientRect();
-  console.log(coord);
-  if ((coord.right - (coord.width/2)) <= ($(window).width() - $(this).outerWidth()) / 2){
-    $('#'+id).find('.dengueimg').attr("src","dengueatackesq.png");
-  } else {
-    $('#'+id).find('.dengueimg').attr("src","dengueatackdir.png");
-  }*/
-  var x = Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft());
-  var y = Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop());
-  $(this).animate({
-    "top": y + "px",
-    "left": x + "px",
-    "scale": "5"},
-    10000,
-    function(){
-      $(this).children().bind('click', function(){ return false; });
-    }
-  );
-}
-
 jQuery(document).ready(function(){
   var score = 0;
+
+  function center(){
+    var x = Math.max(0, (($(window).width() - $('.dengue').outerWidth()) / 2) + $(window).scrollLeft());
+    var y = Math.max(0, (($(window).height() - $('.dengue').outerHeight()) / 2) + $(window).scrollTop());
+    $('.dengue').css("scale", "1");
+    $('.dengue').animate({
+      "top": y + "px",
+      "left": x + "px",
+      "scale": "5"},
+      10000,
+      function(){}
+    );
+  }
 
   function gameover(){
     $('#finalscore').html(score);
     $('.gameover').css('display','block');
-    $('.dengue').css('pointer-events', 'none');
-    $('.dengue').stop().center();
+    $('.dengue').stop().css('pointer-events', 'none');
+    center();
   }
 
   function start(){
