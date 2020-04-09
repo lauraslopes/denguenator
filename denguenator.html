@@ -1,0 +1,46 @@
+<meta charset="utf-8"/>
+<html>
+
+<!--
+(usar canvas x página dedicada. Phaser)
+  - X descer todos os inimigos quando der gaveover
+  - X pegar o tempo que deu até clicar na dengue para estimar os pontos
+  - X mostrar pontos
+  - X velocidades diferentes (e meio random)
+  - dengues não fazer movimento reto
+  - posições random
+  - menu inicio e menu gameover
+  - X gameover: dengues avançam (criar outra imagem)
+  - música
+  - inimigos mais fortes
+  - corona - inimigo para coletar pontos
+  - poder de raquete - hover que mata as dengues - tempo curto
+  - imagem de fundo
+  - biblioteca Hammer para dispositivos móveis
+
+(defold)
+ -->
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+  <script src="script/game.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div>
+    <div class="score"><span>Score: 0</span></div>
+    <div class="dengue" id="dengue1"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
+    <div class="dengue" id="dengue2"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
+    <div class="dengue" id="dengue3"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
+    <div class="dengue" id="dengue4"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
+    <div class="dengue" id="dengue5"><img class="dengueimg" src="images/dengue.png" ondragstart="return false;"></div>
+  <div>
+  <div class="gameover">
+    <p>Score:</p>
+    <p id='finalscore'></p>
+    <p id='tryagain'>Try again</p>
+  </div>
+</body>
+</html>
