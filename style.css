@@ -1,0 +1,73 @@
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dengue {
+  background-color: blue;
+  position: absolute;
+  width: 15%;
+  top: 100%;
+
+}
+
+.dengueimg {
+  padding: 5%;
+  margin: auto;
+  display:block;
+  width: 60%;
+}
+
+.score {
+  font-family: arial;
+  font-size: 4vw;
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  z-index: 30;
+}
+
+.gameover {
+  display: none;
+  width: 50%;
+  height: 50%;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  z-index: 40;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+
+  border: 20px solid transparent;
+  -moz-border-image: -moz-linear-gradient(top left, rgba(128, 191, 255, 0.5), rgba(128, 191, 255, 1));
+  -webkit-border-image: -webkit-linear-gradient(top left, rgba(128, 191, 255, 0.5), rgba(128, 191, 255, 1));
+  border-image: linear-gradient(to bottom right, rgba(128, 191, 255, 0.5), rgba(128, 191, 255, 1));
+  border-image-slice: 1;
+  background-image: linear-gradient(to bottom right, rgba(128, 191, 255, 0), rgba(128, 191, 255, 1));
+
+  font-family: arial;
+  font-size: 4vw;
+}
+
+#canvas {
+   width: 70%;
+   height: 75%;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   /* bring your own prefixes */
+   transform: translate(-50%, -50%);
+   border: 1px solid #000000;
+}
+
+#dengue1 {left:5%;z-index: 0}
+
+#dengue2 {left:25%;z-index: 5}
+
+#dengue3 {left:45%;z-index: 10}
+
+#dengue4{left:65%;z-index: 15}
+
+#dengue5{left:85%;z-index: 20}
