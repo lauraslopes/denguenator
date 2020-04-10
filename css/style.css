@@ -2,6 +2,38 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background-image: url("../images/background.png");
+  /*background-position: center; Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.home {
+  height: 100%;
+  width: 100%;
+}
+
+.home p {
+  text-align: center;
+  font-family: arial;
+  font-size: 7vw;
+}
+
+#sound {
+  color: green;
+}
+
+#homeimg {
+  position: absolute;
+  max-width: 50%;
+  height: auto;
+  top: 60%;
+  left: -10%;
+  transform: rotate(-15deg);
+}
+
+.game {
+  display: none;
 }
 
 .dengue {
@@ -28,8 +60,7 @@ body {
 
 .gameover {
   display: none;
-  width: 50%;
-  height: 50%;
+  width: 10em;
   position: fixed;
   text-align: center;
   top: 50%;

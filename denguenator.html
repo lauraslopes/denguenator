@@ -7,20 +7,23 @@
   - X pegar o tempo que deu até clicar na dengue para estimar os pontos
   - X mostrar pontos
   - X velocidades diferentes (e meio random)
-  - dengues não fazer movimento reto
-  - posições random (fazer a factory)
-  - menu inicio e menu gameover
   - X gameover: dengues avançam
-  - atualizar imagem quando dengues avançam
   - X desativar o click das dengues
-  - música
+  - X desativar selecionar coisas
+  - X música
+  - X imagem de fundo
+  - X menu inicio e menu gameover (adequar à tela)
+  - X atualizar imagem quando dengues avançam
   - inimigos mais fortes
   - corona - inimigo para coletar pontos
   - poder de raquete - hover que mata as dengues - tempo curto
-  - imagem de fundo
   - biblioteca Hammer para dispositivos móveis
+  - dengues não fazer movimento reto - requestAnimationFrame
+  - posições random - factory
+  - requestAnimationFrame
 
-(defold)
+  Amanhã
+  - ranking
  -->
 
 <head>
@@ -28,25 +31,42 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="http://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
   <script src="script/game.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    document.onselectstart = () => {return false;};
+    document.ondragstart = () => {return false;};
+  </script>
 </head>
 
 <body>
-  <div>
+
+  <audio src="sounds/matadengue.mp3" preload="auto" id="somMatadengue"></audio>
+  <audio src="sounds/musica_fundo.mp3" preload="auto" id="musica"></audio>
+  <audio src="sounds/gameover.mp3" preload="auto" id="somGameover"></audio>
+  <audio src="sounds/dengue.mp3" preload="auto" id="somDengue"></audio>
+
+  <div class="home">
+    <p id="titulo">DENGUENATOR</p>
+    <p id="play">play</p>
+    <p id="sound">sound</p>
+    <img id="homeimg" src="images/dengueflip.png">
+  </div>
+
+  <div class="game">
     <div class="score"><span>Score: 0</span></div>
     <div class="dengue" id="dengue1">
-      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+      <img class="dengueimg" src="images/dengue.png">
     </div>
     <div class="dengue" id="dengue2">
-      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+      <img class="dengueimg" src="images/dengue.png">
     </div>
     <div class="dengue" id="dengue3">
-      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+      <img class="dengueimg" src="images/dengue.png">
     </div>
     <div class="dengue" id="dengue4">
-      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+      <img class="dengueimg" src="images/dengue.png">
     </div>
     <div class="dengue" id="dengue5">
-      <img class="dengueimg" src="images/dengue.png" ondragstart="return false;">
+      <img class="dengueimg" src="images/dengue.png">
     </div>
   <div>
 
@@ -56,5 +76,6 @@
     <p id="finalscore"></p>
     <p id="tryagain">Try again</p>
   </div>
+
 </body>
 </html>
